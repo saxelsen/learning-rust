@@ -15,7 +15,7 @@ To participate, clone/fork this repository and branch it. Create a folder named 
 1. Write a program `fib(n)` that takes an input integer `n` and returns the n'th fibonacci number. E.g., the 7th fibonacci number is 13 (1, 1, 2, 3, 5, 8, 13), so `fib(7)` should return 13. For bonus points experiment with different implementations of the algorithm (recursive, iterative, etc.)
 Fibonacci numbers: https://en.wikipedia.org/wiki/Fibonacci_number
 
-### Assignment 3: Guessing Game
+#### Assignment 3: Guessing Game
 1. Write a program for the Guessing Game https://doc.rust-lang.org/book/guessing-game.html
 
 ### Week 3-4
