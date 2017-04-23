@@ -1,0 +1,5 @@
+[package]
+
+name = "hello_palm_tree"
+version = "0.0.1"
+authors = [ "David Canillas Racero <canillas.mail@gmail.com>" ]
