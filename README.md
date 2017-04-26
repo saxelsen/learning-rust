@@ -9,8 +9,7 @@ Enumerations indicate the level of completion: 1. is expected and higher is bett
 
 ### Week 1-2
 #### Assignment 1: Hello, World!
-1. Install the Rust SDK: https://www.rust-lang.org/en-US/
-2. Write, compile and run a 'Hello, World!' program
+1. Install the Rust SDK: https://www.rust-lang.org/en-US/ . Then write, compile and run a 'Hello, World!' program
 
 #### Assignment 2: Fibonacci Sequence generator
 1. Write a program `fib(n)` that takes an input integer `n` and returns the n'th fibonacci number. E.g., the 7th fibonacci number is 13 (1, 1, 2, 3, 5, 8, 13), so `fib(7)` should return 13. For bonus points experiment with different implementations of the algorithm (recursive, iterative, etc.)
