@@ -1,0 +1,6 @@
+[package]
+name = "fib_gen"
+version = "0.1.0"
+authors = ["Kartojal <canillas.mail@gmail.com>"]
+
+[dependencies]
