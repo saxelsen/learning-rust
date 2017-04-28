@@ -2,12 +2,12 @@ extern crate rand;
 
 use std::io::{self, Write};
 use std::cmp::Ordering;
-use std::__rand::thread_rng;
+use rand::Rng;
 
 fn main() {
     println!("Guess the number");
 
-    let mut secret_number = __rand::thread_rng().gen_range(1, 101);
+    let mut secret_number = rand::thread_rng().gen_range(1, 101);
 
     loop {
         println!("Please input your guess.");
