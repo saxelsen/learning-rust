@@ -25,9 +25,9 @@ fn fibo(n: u64) -> u64 {
 
     if n > 2 {
         fibo(n - 1) + fibo(n - 2)
-    } else if n == 1 {
-	1
+    } else if n == 0 {
+	0
     } else {
-        0
+        1
     }
 }
