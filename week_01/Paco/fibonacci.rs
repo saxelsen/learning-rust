@@ -23,11 +23,11 @@ fn main() {
 /// This is very slow (exponential); iterative is better (0(n))
 fn fibo(n: u64) -> u64 {
 
-    if n == 0 {
-        0
-    } else if n <= 2 {
+    if n > 2 {
+        fibo(n - 1) + fibo(n - 2)
+    } else if n == 1 {
 	1
     } else {
-        fibo(n - 1) + fibo(n - 2)
+        0
     }
 }
