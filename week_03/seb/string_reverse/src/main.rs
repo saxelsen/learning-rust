@@ -5,6 +5,18 @@ fn reverse(word: &String) -> String {
 	reverse_word
 }
 
+fn reverse_manual(word: &String) -> String {
+    let size = word.len();
+    let mut reverse_chars = vec![' '; size];
+    let chars = word.chars();
+
+    for (i, character) in chars.enumerate() {
+        reverse_chars[size - 1 - i] = character;
+    }
+
+    reverse_chars.into_iter().collect()
+}
+
 fn main() {
 
 	loop {
@@ -14,7 +26,7 @@ fn main() {
 	
     	io::stdin().read_line(&mut word).expect("Failed to read line");
 	
-    	let reverse_word = reverse(&word);
+    	let reverse_word = reverse_manual(&word);
 	
     	println!("{} backwards is : {}", word.trim(), reverse_word);
     	println!("Try again? y/n");
@@ -29,7 +41,10 @@ fn main() {
     				break;
     				},
     			"y" => continue,
-    			_ => println!("I don't understand. Goodbye!")
+    			_ => {
+                    println!("I don't understand. Goodbye!");
+                    break;
+                }
     		}
     }
 }
