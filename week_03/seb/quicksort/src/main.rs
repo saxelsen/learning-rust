@@ -1,5 +1,8 @@
+extern crate rand;
+
 use std::vec::Vec;
 use std::cmp::PartialOrd;
+use rand::Rng;
 
 fn quicksort_int(list: &Vec<i32>, ascending: bool) -> Vec<i32> {
 
@@ -109,23 +112,31 @@ fn quicksort<T: PartialOrd + Clone>(list: &Vec<T>, ascending: bool) -> Vec<T> {
 
 
 fn main() {
-    let list = vec![5,1,-5,2,30,10,8];
+    let n = 20;
+    let mut rng = rand::thread_rng();
+
+    let mut int_list = Vec::<i32>::new();
+    for _ in 0..n {
+        let rnd_int: i32 = rng.gen_range(0, 100);
+        int_list.push(rnd_int);
+    }
+
     println!("\nList:");
-    for i in &list {
+    for i in &int_list {
         println!("{}", i);
     }
-    let sorted = quicksort_int(&list, true);
+    let sorted = quicksort_int(&int_list, true);
     println!("\nSorted list:");
     for i in &sorted {
         println!("{}", i);
     }
 
-    let list = vec!["letter B", "letter C", "letter A"];
+    let gen_list = vec!["Denmark", "India", "Bosnia", "South Africa", "Cuba", "Australia",  "Ecuador"];
     println!("\nGeneric list:");
-    for i in &list {
+    for i in &gen_list {
         println!("{}", i);
     }
-    let sorted_generic_list = quicksort(&list, true);
+    let sorted_generic_list = quicksort(&gen_list, true);
     println!("\nSorted generic list:");
     for i in &sorted_generic_list {
         println!("{}", i);
